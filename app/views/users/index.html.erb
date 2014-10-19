@@ -1,0 +1,41 @@
+<h1>Notes</h1>
+<style>
+  div {
+    font-size : 30px
+  }
+  h1 {
+    font-size: 50px;
+    color:red
+  }
+  th {
+    font-size: 29px
+  }
+  </style>
+<p>
+<div class="btn-group btn-group-justified">
+  <div class="btn-group">
+    <button type="button" class="glyphicon glyphicon-plus"><a href="/new_user">Add a New Note</a></button>
+    <button type="button" class="glyphicon glyphicon-share-alt"><a href="/home">Return to Home Page</a></button>
+    </div>
+  </div>
+<table>
+  <thead>
+    <tr> <span>
+      <th>Name      .|~::~|    </th>
+      <th>.   Note      </th>
+      </span>
+    </tr>
+  </thead>
+
+  <tbody>
+  <% @users.each do |user| %>
+    <tr>
+          <td><%= user.name %></td>
+          <td><%= user.note %></td>
+          <td><button type="button" class="glyphicon glyphicon-resize-full"><a href="/users/<%= user.id %>">Note Details</a></button>
+      </td>
+    </tr>
+  <% end %>
+  </tbody>
+</table>
+

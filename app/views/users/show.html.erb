@@ -1,0 +1,32 @@
+<h1>Note #<%= @user.id %></h1>
+<style>
+  * {
+    font-size: 50 px;
+    color: red
+  }
+  h1 {
+    color: red
+  }
+  </style>
+<div>
+  <strong>Note Name</strong>:<br />
+  <p><%= @user.name %></p>
+</div>
+<div>
+  <strong>Date of the Note</strong>:<br />
+  <p><%= @user.date %></p>
+</div>
+<div>
+  <strong>Note</strong>:<br />
+  <p><%= @user.note %></p>
+</div>
+<br>
+<div class="btn-group btn-group-justified">
+  <div class="btn-group">
+    <button type="button" class="glyphicon glyphicon-wrench"><a href="/users/<%= @user.id %>/edit">Edit</a></button> |~::~|
+    <button type="button" class="glyphicon glyphicon-fire"><a href="/users/<%= @user.id %>/destroy">Delete</a></button> |~::~|
+    <button type="button" class="glyphicon glyphicon-share-alt"><a href="/users">Return to Notes Index</a></button>
+    </div>
+  </div>
+    
+
